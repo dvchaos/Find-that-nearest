@@ -4,9 +4,13 @@
 <title>Find that nearest ... </title>
 
 <!-- created by Tom Brett @ BrettHQ.com -->
+<!-- uses opencagedata.com to find location -->
+	
+<!-- uses google maps api to search for -->
+<!-- JavaScript and jquery -->
+	
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 
 
 <style>
@@ -157,7 +161,7 @@ function reverseGeoLookup(lon,lat) {
 
   var api_url = 'https://api.opencagedata.com/geocode/v1/json'
   
-  // needs opengdata.com api key (free) //
+  // needs opencagedata.com api key (free) //
 
   var request_url = api_url
     + '?'
