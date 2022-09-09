@@ -40,12 +40,13 @@ body {
  
 function js_loadmap (code,searchfor) {  
 
-
+ <!-- // loads Google maps api // -->
+	
 		mypostcode = code; // postcode
 		mysearch = searchfor; // search for 
  
  			   var myurl = "https://www.google.com/maps/embed/v1/place?q="+mysearch+" in "+mypostcode+"&key=AIzaSyA0z1El43IfjLQkUNp4O4vxYRdc-z_L9Q8";
-			   
+			   <!-- // needs Google maps api key (free) // -->
 			   
 			   //width="690" height="515
 			   			   
@@ -53,6 +54,8 @@ function js_loadmap (code,searchfor) {
 			   $('#mappit').attr('height', 515);
 			   
 			   $('#mappit').attr('src', myurl);
+	
+	 			<!-- // shows map in iframe // -->
  
     
         
@@ -73,6 +76,8 @@ Now no need for an app!<BR>
 
 <DIV ALIGN="center">
 <iframe name="mappit" id="mappit" width="0" height="0" src="" frameborder="0"></iframe>
+	<!-- iframe for google maps api -->
+	
 </DIV>
 <BR><BR>
 
@@ -100,6 +105,7 @@ Click the button below to get your current location, from your web-browser!<BR>
 </FONT><BR><BR>
 
 <button onclick="getLocation()" style="height:50px; width:200px; box-shadow: 5px 10px #888888;">Get current location</button>
+		<!-- get current location -->
 <BR><BR>
 <FONT SIZE="-1">
 (N:B:> Best used on mobile browsers, may take a while to load)
@@ -121,6 +127,7 @@ UK Postal code from lon/lat :><div id="postcode"></div><BR><BR>
 
 <BR><BR>
 <button onclick="go()" style="height:50px; width:200px; box-shadow: 5px 10px #888888;">CLICK HERE!</button>
+	<!-- execute search process -->
 
 <BR><BR>
 
@@ -155,13 +162,14 @@ function reverseGeoLookup(lon,lat) {
 	out.innerHTML ="incorrect api key";
 	
   var apikey = 'cea7361949e64e4e8a6b980963cd850f';
+	 <!-- // needs opencagedata.com api key (free) // -->
   
   var latitude = lat;
   var longitude = lon;
 
   var api_url = 'https://api.opencagedata.com/geocode/v1/json'
   
-  // needs opencagedata.com api key (free) //
+ 
 
   var request_url = api_url
     + '?'
